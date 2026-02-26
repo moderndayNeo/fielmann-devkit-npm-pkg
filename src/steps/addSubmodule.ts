@@ -19,8 +19,10 @@ export async function addSubmodule() {
   try {
     await execa("git", ["submodule", "add", REPO_URL, SUBMODULE_DIR]);
     spinner.succeed("AI DevKit submodule added successfully.");
-  } catch (error) {
+  } catch (err: unknown) {
     spinner.fail("Failed to add the AI DevKit submodule.");
+
+    const error = err as { stderr?: string; message?: string };
 
     if (error.stderr?.includes("not a git repository")) {
       console.log(

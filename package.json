@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "CLI to set up the Fielmann AI DevKit in your project",
   "bin": {
-    "fielmann-devkit": "./bin/cli.js"
+    "fielmann-devkit": "./dist/bin/cli.js"
   },
   "type": "module",
   "engines": {
     "node": ">=18"
   },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
   "files": [
-    "bin",
-    "src"
+    "dist"
   ],
   "keywords": [
     "fielmann",
@@ -32,5 +35,9 @@
     "execa": "^9.5.2",
     "inquirer": "^12.4.2",
     "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.1",
+    "typescript": "^5.9.3"
   }
 }
