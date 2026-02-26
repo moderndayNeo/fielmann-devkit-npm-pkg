@@ -1,0 +1,36 @@
+{
+  "name": "fielmann-devkit",
+  "version": "1.0.0",
+  "description": "CLI to set up the Fielmann AI DevKit in your project",
+  "bin": {
+    "fielmann-devkit": "./bin/cli.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "keywords": [
+    "fielmann",
+    "ai",
+    "devkit",
+    "cursor",
+    "development",
+    "cli"
+  ],
+  "author": "Adam Zdrzalka <adam.zdrzalka@fielmann.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fielmann-ag/fielmann-devkit-npm-pkg.git"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "execa": "^9.5.2",
+    "inquirer": "^12.4.2",
+    "ora": "^8.2.0"
+  }
+}
