@@ -1,6 +1,6 @@
 {
   "name": "fielmann-devkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to set up the Fielmann AI DevKit in your project",
   "bin": {
     "fielmann-devkit": "./dist/bin/cli.js"
@@ -28,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fielmann-ag/fielmann-devkit-npm-pkg.git"
+    "url": "https://github.com/moderndayNeo/fielmann-devkit-npm-pkg.git"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.3.0",
