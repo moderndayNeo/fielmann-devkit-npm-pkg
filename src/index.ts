@@ -8,38 +8,40 @@ import { runSetup } from "./steps/runSetup.js";
 import { runUpdate } from "./steps/runUpdate.js";
 
 export async function runWizard() {
-	console.log(chalk.bold.blue("\n  Fielmann AI DevKit Setup\n"));
+  console.log(chalk.bold.blue("\n  Fielmann AI DevKit Setup\n"));
 
-	await checkIdeTerminal();
-	await checkProjectRoot();
+  await checkIdeTerminal();
+  await checkProjectRoot();
 
-	const action = await checkExistingDevkit();
+  const action = await checkExistingDevkit();
 
-	if (action === "exit") {
-		console.log(chalk.blue("\nNo changes made. Goodbye!\n"));
-		return;
-	}
+  if (action === "exit") {
+    console.log(chalk.blue("\nNo changes made. Goodbye!\n"));
+    return;
+  }
 
-	if (action === "update") {
-		await runUpdate();
+  if (action === "update") {
+    await runUpdate();
 
-		console.log(
-			chalk.bold.green("\nAll done! The AI DevKit has been updated."),
-		);
-		console.log(
-			chalk.blue("Your Cursor rules, commands, and MCP config are up to date.\n"),
-		);
-		return;
-	}
+    console.log(
+      chalk.bold.green("\nAll done! The AI DevKit has been updated."),
+    );
+    console.log(
+      chalk.blue(
+        "Your Cursor rules, commands, and MCP config are up to date.\n",
+      ),
+    );
+    return;
+  }
 
-	await checkRepoAccess();
-	await addSubmodule();
-	await runSetup();
+  await checkRepoAccess();
+  await addSubmodule();
+  await runSetup();
 
-	console.log(
-		chalk.bold.green("\nAll done! The AI DevKit is set up in your project."),
-	);
-	console.log(
-		chalk.blue("Your Cursor rules, commands, and MCP config are ready.\n"),
-	);
+  console.log(
+    chalk.bold.green("\nAll done! The AI DevKit is set up in your project."),
+  );
+  console.log(
+    chalk.blue("Your Cursor rules, commands, and MCP config are ready.\n"),
+  );
 }

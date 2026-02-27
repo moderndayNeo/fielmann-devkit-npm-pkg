@@ -10,8 +10,8 @@ export async function checkProjectRoot() {
   if (!isRoot) {
     console.log(
       chalk.yellow(
-        "\nPlease navigate to your project's root directory and rerun:"
-      )
+        "\nPlease navigate to your project's root directory and rerun:",
+      ),
     );
     console.log(chalk.cyan("  npx fielmann-devkit\n"));
     process.exit(0);

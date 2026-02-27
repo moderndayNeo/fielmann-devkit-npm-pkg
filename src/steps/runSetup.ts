@@ -11,13 +11,11 @@ export async function runSetup() {
   const scriptPath = join(SUBMODULE_DIR, SETUP_SCRIPT);
 
   if (!existsSync(scriptPath)) {
-    console.log(
-      chalk.red(`\nSetup script not found at ${scriptPath}.`)
-    );
+    console.log(chalk.red(`\nSetup script not found at ${scriptPath}.`));
     console.log(
       chalk.yellow(
-        "Try updating the submodule: git submodule update --remote .ai-devkit\n"
-      )
+        "Try updating the submodule: git submodule update --remote .ai-devkit\n",
+      ),
     );
     process.exit(1);
   }
@@ -34,7 +32,7 @@ export async function runSetup() {
     });
   } catch {
     console.log(
-      chalk.red("\nThe setup script failed. You can retry manually with:")
+      chalk.red("\nThe setup script failed. You can retry manually with:"),
     );
     console.log(chalk.cyan(`  cd ${SUBMODULE_DIR} && ./${SETUP_SCRIPT}\n`));
     process.exit(1);

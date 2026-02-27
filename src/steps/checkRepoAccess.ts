@@ -11,7 +11,9 @@ export async function checkRepoAccess() {
 
   if (!hasAccess) {
     console.log(
-      chalk.yellow("\nYou need access to the AI DevKit repository to continue.")
+      chalk.yellow(
+        "\nYou need access to the AI DevKit repository to continue.",
+      ),
     );
     console.log(chalk.yellow("Request access by contacting:"));
     console.log(chalk.cyan("  Adam Zdrzalka — adam.zdrzalka@fielmann.com\n"));
