@@ -10,16 +10,17 @@ npx fielmann-devkit
 
 The wizard will:
 
-1. Confirm you are in your project's root directory
-2. Verify you have access to the AI DevKit repository
-3. Add the AI DevKit as a Git submodule (`.ai-devkit/`)
-4. Run the setup script to copy Cursor rules, commands, and MCP configuration into your `.cursor/` directory
+1. Confirm you are running this in your IDE's integrated terminal
+2. Confirm you are in your project's root directory
+3. Verify you have access to the AI DevKit repository
+4. Add the AI DevKit as a Git submodule (`.ai-devkit/`)
+5. Run the setup script to copy Cursor rules, skills, and MCP configuration into your `.cursor/` directory
 
 ## Prerequisites
 
 - **Node.js** >= 18
 - **Git** installed and available on your PATH
-- **GitHub access** to [fielmann-ag/ai-devkit](https://github.com/fielmann-ag/ai-devkit) (request access from adam.zdrzalka@fielmann.com if needed)
+- **GitHub access** to the [Fielmann AG organisation](https://github.com/fielmann-ag/)
 
 ## What gets set up
 

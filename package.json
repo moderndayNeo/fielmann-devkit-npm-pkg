@@ -11,7 +11,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "husky",
+    "format": "prettier --write ."
   },
   "files": [
     "dist"
@@ -36,8 +38,14 @@
     "execa": "^9.5.2",
     "ora": "^8.2.0"
   },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
   "devDependencies": {
     "@types/node": "^25.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
     "typescript": "^5.9.3"
   }
 }
